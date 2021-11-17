@@ -1,0 +1,38 @@
+.about {
+  padding-top: 0;
+}
+
+.about__title {
+  @extend %page-title;
+}
+
+.about__list {
+  display: flex;
+}
+.about__item {
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+.about__wrapper {
+  position: relative;
+}
+
+.about__text {
+  position: absolute;
+  bottom: 0;
+
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-title-color);
+  background-color: rgba(47, 48, 58, 0.8);
+
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
