@@ -1,4 +1,4 @@
-//UTILITS
+//Utils
 @import './utils/variables';
 @import './utils/visually-hidden';
 @import './utils/placeholders';
@@ -15,8 +15,9 @@
 @import './components/backdrop';
 @import './components/modal';
 @import './components/modal-form';
+@import './components/mobile-menu';
 
-//LAYOUT
+//Layout
 @import './layout/header';
 @import './layout/hero';
 @import './layout/features';

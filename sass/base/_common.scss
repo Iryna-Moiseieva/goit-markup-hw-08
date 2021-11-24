@@ -18,6 +18,8 @@ button {
 }
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .link {
@@ -26,4 +28,8 @@ img {
 body {
   font-family: 'Roboto', sans-serif;
   color: var(--primary-text-color);
+
+  @media screen and (min-width: 320) {
+    overflow-x: hidden;
+  }
 }

@@ -1,20 +1,41 @@
-.portfolio-filter {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 16px;
-  margin-bottom: 34px;
-}
+.portfolio__filter {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -8px;
+    margin-bottom: -15px;
 
-.portfolio-filter__item {
-  &:not(:last-child) {
-    margin-right: 8px;
+    margin-bottom: 25px;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
   }
 }
 
-.portfolio-filter__button {
+.portfolio__filter-item {
+  @media screen and (max-width: 767px) {
+    margin-right: 8px;
+    margin-bottom: 15px;
+  }
+
+  @media screen and (min-width: 768px) {
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+}
+
+.portfolio__filter-button {
   border-radius: 4px;
   padding: 6px 22px;
-  min-width: 73px;
+
   text-align: center;
   border: 1px solid transparent;
 
@@ -38,15 +59,29 @@
 }
 
 .portfolio__list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
-  margin-bottom: -30px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-bottom: -30px;
+  }
 }
 .portfolio__item {
-  flex-basis: calc((100% - 3 * 30px) / 3);
-  margin-left: 30px;
-  margin-bottom: 30px;
+  width: 100%;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-left: 30px;
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 3 - 30px);
+  }
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
@@ -65,8 +100,12 @@
   position: absolute;
   top: 100%;
 
-  padding: 63px 24px;
   height: 100%;
+  padding-top: 77px;
+  padding-bottom: 77px;
+  padding-right: 24px;
+  padding-left: 24px;
+
   transform: translateY(0);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -75,6 +114,16 @@
   letter-spacing: 0.03em;
   color: var(--primary-title-color);
   background-color: rgba(33, 150, 243, 0.9);
+
+  @media screen and (min-width: 768px) {
+    padding-top: 49px;
+    padding-bottom: 49px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 63px;
+    padding-bottom: 63px;
+  }
 
   .portfolio__item:hover & {
     transform: translateY(-100%);
@@ -88,7 +137,14 @@
   border-right: 1px solid rgba(238, 238, 238, 1);
 }
 
+.portfolio__box--small {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding-bottom: 56px;
+  }
+}
+
 .portfolio__title {
+  margin-bottom: 4px;
   font-weight: bold;
   font-size: 18px;
   line-height: 2;

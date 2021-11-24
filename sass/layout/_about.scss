@@ -2,6 +2,14 @@
   padding-top: 0;
 }
 
+.about--hidden {
+  display: none;
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
+}
+
 .about__title {
   @extend %page-title;
 }
@@ -9,6 +17,7 @@
 .about__list {
   display: flex;
 }
+
 .about__item {
   &:not(:last-child) {
     margin-right: 30px;
