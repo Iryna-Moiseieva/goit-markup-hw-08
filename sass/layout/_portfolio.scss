@@ -137,11 +137,6 @@
   border-right: 1px solid rgba(238, 238, 238, 1);
 }
 
-.portfolio__box--small {
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    padding-bottom: 56px;
-  }
-}
 
 .portfolio__title {
   margin-bottom: 4px;
